@@ -29,6 +29,12 @@ markdown: GFM
 theme: minima
 plugins:
   - jekyll-feed
+# github サイト上でTOPに表示されるREADME.mdと、Webサイトのデフォルトで表示される index コンテンツは分けておきたい。
+# README.md にはサイトをビルドするときの手順や編集の注意点などを書いておき、
+# index.{html|md} にサイトの内容を表示するようにする。
+# このため、jekyll-readme-index は無効化しておく。
+#  - jekyll-readme-index
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
