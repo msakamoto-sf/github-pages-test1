@@ -19,8 +19,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/github-pages-test1" # the subpath of your site, e.g. /blog
+# NOTE: baseurl については theme など随所で使われているが、末尾 "/" の有無の扱いがマチマチ。
+# 余計な "/" を削るよりは、足りない "/" を付け足すほうが theme 側での処理が楽なので、ここでは末尾 "/" はつけずに定義する。
+url: "https://msakamoto-sf.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: msakamoto_sf
 github_username: msakamoto-sf
 
