@@ -46,3 +46,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# foo/bar/ 以下をmarkdownとして処理させずに、静的なファイルとして単にコピーさせる方法が分からない。
+# https://github.com/jekyll/jekyll/issues/77
+# exclude で除外する方法も紹介されているが、これではファイルコピー自体が発生しないので、
+# 公開用ディレクトリに foo/bar/ がコピーされない。
+# そうではなく、 .md や .html も含めて単にファイルとしてコピーしたいだけなのだが・・・。
+# -> 上記 issue での一連の流れを見るに、jekyllのビルドシステムそのものをカスタマイズするとか、
+# jekyll の外部でビルドシステムを組み上げるしかなさそう。
+# 試しに以下のような exclude 設定をしてみたが、foo/ は _site にコピーされないままとなった。
+#exclude:
+#  - Gemfile
+#  - Gemfile.lock
+#  - node_modules
+#  - vendor/
+#  - foo/
