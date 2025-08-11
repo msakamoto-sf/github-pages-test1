@@ -9,11 +9,27 @@ requirements:
 - docker
 - build docker container image: [msakamoto-sf/github-pages-jekyll-docker-image](https://github.com/msakamoto-sf/github-pages-jekyll-docker-image)
 
-build:
+bundle install:
 
 ```
 $ docker run --rm -it -u `id -u`:`id -g` -v $PWD:/src -w /src github-pages-jekyll bundle install
 ```
+
+`jekyll build` (local test with [vscode Live Preview extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) ):
+
+```
+$ docker run --rm -it -u `id -u`:`id -g` -v $PWD:/src -w /src github-pages-jekyll bundle exec jekyll build
+```
+
+`jekyll build` (same to production GitHub Pages):
+
+```
+$ docker run --rm -it -u `id -u`:`id -g` -v $PWD:/src -w /src -e JEKYLL_ENV=production github-pages-jekyll bundle exec jekyll build
+```
+
+refs:
+
+- [`[jekyll × Github Pages - Tips] 本番環境にだけ出力したいタグを設定する方法 #GithubPages - Qiita`](https://qiita.com/rhinonolike/items/7c1bb1ae85605f099f70)
 
 ## init
 
