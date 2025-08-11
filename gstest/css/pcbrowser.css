@@ -39,7 +39,7 @@ img {
 	font-size: small;
 	color: white;
 	margin: 0px;
-	margin-bottom: 1em;
+	/* margin-bottom: 1em; */
 	padding: 0px;
 	border-bottom: 1px solid black;
 	background: black;
@@ -133,6 +133,7 @@ fieldset {
   background: white;
 }
 
+/* もう side menu は使わないので、width 調整は外す。
 @media (min-width: 800px) {
   .contents_s {
     width: 77%;
@@ -145,6 +146,7 @@ fieldset {
     order: 1;
   }
 }
+*/
 
 .contents_s .data_body {
   margin: 0.2ex;
@@ -291,7 +293,7 @@ table.zebralist {
 	width: 100%;
 	text-align: center;
 	margin: 0px;
-	margin-top: 1em;
+	/* margin-top: 1em; */
 	border-top: 1px solid #900;
 	font-size: small;
 	background: black;
@@ -328,12 +330,13 @@ table.zebralist {
  ***************************************/
 
 .data_main {
-	border: 1px solid dimgray;
+	/* border: 1px solid dimgray; */
 	padding: 0.5ex;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	margin: 0px;
-	margin-bottom: 1em;
-	margin-right: 1ex;
-	padding-bottom: 1ex;
+	/*margin-bottom: 1em;*/
+	/*margin-right: 1ex;*/
 	background: white;
 }
 
