@@ -1,0 +1,48 @@
+---
+layout: base
+---
+{%- if jekyll.environment == "production" -%}
+{%- assign site_top_url = site.url | append: site.baseurl -%}
+{%- else -%}
+{%- assign site_top_url = '/_site' -%}
+{%- endif -%}
+<div class="data_body">
+
+{{ content }}
+
+<h3>ページ(page)一覧</h3>
+
+<ul>
+{%- for page in site.pages %}
+    <li>
+        {%- if page.date -%}{{ page.date | date: "%Y-%m-%d" }}{%- else -%}(作成日未設定){%- endif -%}
+        {%- if page.title -%}
+            <a href="{{ site_top_url }}{{ page.url }}">{{ page.title | escape }}</a>
+        {%- else -%}
+            <a href="{{ site_top_url }}{{ page.url }}">{{ page.url | escape }}</a>
+        {%- endif -%}
+    </li>
+{%- endfor %}
+</ul>
+
+<h3>ポスト(post)一覧</h3>
+
+<ul>
+{%- for post in site.posts %}
+    <li>
+        {{ post.date | date: "%Y-%m-%d" }}
+        <a href="{{ site_top_url}}{{ post.url }}">{{ post.title | escape }}</a>
+    </li>
+{%- endfor %}
+</ul>
+
+<h3>タグ(tag)一覧</h3>
+
+<p>
+デモページなのと、今回想定している用途としてタグ一覧やタグごとのリンクは必要ないので、ここでは省略します。
+</p>
+<p>
+参考: <a target="_blank" href="https://qiita.com/mnishiguchi/items/fa1e8fd2e893ea801ce8">Jekyllサイトにシンプルなタグ・カテゴリのリストを実装 #HTML - Qiita</a>
+</p>
+
+</div>
