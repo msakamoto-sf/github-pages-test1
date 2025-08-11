@@ -3,6 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+date: 2025-08-11
+modified_date: 2025-08-11
 ---
 
 こんにちは
+
+これは github pages 用の jekyll の動作検証やカスタマイズを試行錯誤するリポジトリです。
